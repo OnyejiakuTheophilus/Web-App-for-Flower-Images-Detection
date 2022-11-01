@@ -41,7 +41,9 @@ st.write("Taraxacum is a large genus of flowering plants in the family Asteracea
 st.title("Making Predictions")
 st.write("""Please upload your choice of flower to predict""")
 uploaded_file = st.file_uploader("Choose a jpeg file", type=["jfif", "jpg", "jpeg"])
-new_model = load_model("flowerprediction.h5")
+
+new_model = tf.keras.utils.get_file("flowerprediction.h5", "https://drive.google.com/file/d/1l8j7d6o7wDZ91rPEMnpcSPnriGr6T226/view")
+
 if uploaded_file is None:
     st.write("Please upload a jpg, jpeg or a jfif image of the flower in the drag and drop box above")
 else:
