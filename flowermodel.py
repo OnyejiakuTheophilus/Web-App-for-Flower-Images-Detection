@@ -61,20 +61,20 @@ else:
         score = tf.nn.softmax(predictions[0])
         score = score.numpy()
         score = np.max(score)*100
-        if score < 34:
+        if score < 40:
             st.subheader("OOPS!")
             st.image('thinking-think.gif')
-            st.subheader("Sorry upload another image of the same flower. My confidence about this prediction is just too low.")
-        elif score > 34 and prediction == 0:
-            st.subheader(f'This is a {class_names[0]} with a confidence of {round(score)}%')
-        elif score > 34 and prediction == 1:
-            st.subheader(f'This is a {class_names[1]} with a confidence of {round(score)}%')
-        elif score > 34 and prediction == 2:
-            st.subheader(f'This is a {class_names[2]} with a confidence of {round(score)}%')
-        elif score > 34 and prediction == 3:
-            st.subheader(f'This is a {class_names[3]} with a confidence of {round(score)}%')
-        elif score > 34 and prediction == 4:
-            st.subheader(f'This is a {class_names[4]} with a confidence of {round(score)}%')
+            st.subheader("Sorry upload another image of the same flower. My confidence about this prediction is just too low. Better still, upload a better quality jpeg image")
+        elif score > 40 and prediction == 0:
+            st.subheader(f'This is a {class_names[0]}. I am {round(score)}% confident about this.')
+        elif score > 40 and prediction == 1:
+            st.subheader(f'This is a {class_names[1]}. I am {round(score)}% confident about this.')
+        elif score > 40 and prediction == 2:
+            st.subheader(f'This is a {class_names[2]}. I am {round(score)}% confident about this.')
+        elif score > 40 and prediction == 3:
+            st.subheader(f'This is a {class_names[3]}. I am {round(score)}% confident about this.')
+        elif score > 40 and prediction == 4:
+            st.subheader(f'This is a {class_names[4]}. I am {round(score)}% confident about this.')
 
 
 st.header("Developers Note")
