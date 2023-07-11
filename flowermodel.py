@@ -26,7 +26,7 @@ else:
     image = np.asarray(image)
     st.header("Detect the FLower Type")
     st.write("Now click the button below to identify the FLower")
-    if st.button('Make Prediction'):
+    if st.button('Identify this flower'):
         class_names = np.array(['daisy', 'dandelion', 'roses', 'sunflowers', 'tulips'])
         predictions = new_model.predict(np.expand_dims(image / 255, 0))
         score = tf.nn.softmax(predictions)
@@ -48,6 +48,9 @@ else:
                 - Improved yield: Effective pollination by daisy-associated pollinators can enhance the yield of neighboring crops by ensuring optimal fertilization and fruit development.
                 - Genetic diversity: Cross-pollination with daisies promotes genetic diversity in agricultural crops, which can enhance their resilience to pests, diseases, and environmental stresses.
                 - Habitat provision: Daisies serve as habitat and shelter for beneficial insects, providing nesting sites and refuge for pollinators, which can benefit other crops in the vicinity.
+                Pest and Diseases
+                - Pests: Aphids, Thrips, Spider Mites
+                - Diseases: Powdery Mildew, Leaf Spot, Stem Rot
                 """
             )
             st.markdown('''
@@ -73,6 +76,9 @@ else:
                 - Attracting beneficial insects: Dandelions attract a variety of beneficial insects, such as ladybugs and hoverflies, which can help control pests on the farm.
                 - Ecosystem support: Dandelions contribute to the overall biodiversity and ecological balance on the farm by supporting a diverse array of pollinators and other beneficial insects.
                 - Resilience and adaptability: Dandelions are hardy plants that can thrive in various environmental conditions, making them reliable sources of pollination services.
+                Pest and Diseases
+                - Pests: Aphids, Flea Beetles, Leafhoppers
+                - Diseases: Rust, Leaf Spot, Dandelion Taraxacum Mosaic Virus
                 """
             )
             st.markdown('''
@@ -100,6 +106,9 @@ else:
                 - They require low maintenance, being resistant to pests and diseases and tolerating different soil types.
                 - Roses add aesthetic value to agricultural landscapes with their vibrant colors and attractive blooms.
                 - Roses are a cost-effective option, readily available and easy to propagate, providing an affordable solution to enhance pollination and crop productivity.
+                Pests and Diseases
+                - Pests: Aphids, Thrips, Japanese Beetles
+                - Diseases: Black Spot, Powdery Mildew, Rose Mosaic Virus, Rust
                 """)
             st.markdown('''
             <style>
@@ -124,6 +133,9 @@ else:
                 - Genetic diversity: Cross-pollination facilitated by sunflowers contributes to genetic diversity among agricultural crops, which can improve their resilience to pests, diseases, and environmental challenges.
                 - Pollination services: Sunflowers act as a hub for pollinators, increasing their presence and activity on the farm, thus benefiting other crops that rely on these pollinators.
                 - Enhanced crop quality: Adequate pollination from sunflower-associated pollinators improves the quality attributes of agricultural crops, such as size, shape, color, and taste.
+                Pest and Diseases
+                - Pests: Aphids, Sunflower Moth, Seed Weevils
+                - Diseases: Downy Mildew, Powdery Mildew, Rust
                 """
             )
             st.markdown('''
@@ -150,6 +162,9 @@ else:
                 - Fruit set improvement: Effective pollination of neighboring crops by tulip-associated pollinators can enhance fruit set and seed production, leading to increased yields.
                 - Genetic variability: Cross-pollination with tulips contributes to genetic variability among agricultural crops, which can enhance their adaptability and resilience to changing environmental conditions.
                 - Pollination efficiency: Tulip flowers provide easily accessible pollen, which adheres to visiting pollinators, increasing the likelihood of efficient pollen transfer to other crops.
+                Pest and Diseases
+                - Pests: Aphids, Tulip Bulb Fly, Slugs
+                - Diseases: Tulip Fire, Botrytis Blight, Tulip Breaking Virus
                 """
             )
             st.markdown('''
@@ -159,12 +174,7 @@ else:
             }
             </style>
             ''', unsafe_allow_html=True)
+
         else:
             st.image("thinking-think.gif")
             st.write("Sorry I have no idea what type of flower this is. Kindly upload another image of the same flower")
-
-st.header("Developers Note")
-st.write("Thank you so much for taking out time to interact with this APP. "
-         "\nThis App is intended to solve the little hassle with identifying some specific kind of flowers.")
-st.image("1eiE.gif")
-st.header('Thank you so very Much!')
