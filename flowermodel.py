@@ -32,7 +32,7 @@ else:
         score = tf.nn.softmax(predictions)
         prediction = np.argmax(score, axis=1)
         confidence = round(np.max(predictions) * 100, 2)
-        if prediction == 0 and confidence > 70:
+        if prediction == 0 and confidence > 98:
             st.write(f"This is {class_names[0].upper()} and I am  {confidence}% sure about it")
             st.header("Importance of  Daisy Flowers to Agriculture")
             st.image("DAISY.jfif")
@@ -60,7 +60,7 @@ else:
             }
             </style>
             ''', unsafe_allow_html=True)
-        elif prediction == 1 and confidence > 70:
+        elif prediction == 1 and confidence > 98:
             st.write(f"This is {class_names[1].upper()} and I am  {confidence}% sure about it")
             st.header("Importance of Dandelion Flowers to Agriculture")
             st.image("Dandelions.jfif")
@@ -89,7 +89,7 @@ else:
                     </style>
                     ''', unsafe_allow_html=True)
 
-        elif prediction == 2 and confidence > 70:
+        elif prediction == 2 and confidence > 98:
             st.write(f"This is {class_names[2].upper()} and I am  {confidence}% sure about it")
             st.header("Importance of Roses Flowers to Agriculture")
             st.image("ROSES.jfif")
@@ -117,7 +117,7 @@ else:
             }
             </style>
             ''', unsafe_allow_html=True)
-        elif prediction == 3 and confidence > 70:
+        elif prediction == 3 and confidence > 98:
             st.write(f"This is {class_names[3].upper()} and I am  {confidence}% sure about it")
             st.write("Importance of Sunflowers to Agriculture")
             st.image("SUNFLOWER.jfif")
@@ -145,7 +145,7 @@ else:
             }
             </style>
             ''', unsafe_allow_html=True)
-        elif prediction == 4 and confidence > 70:
+        elif prediction == 4 and confidence > 98:
             st.write(f"This is {class_names[4].upper()} and I am  {confidence}% sure about it")
             st.header("Importance of Tulips to Agriculture")
             st.image("TULIP.jfif")
